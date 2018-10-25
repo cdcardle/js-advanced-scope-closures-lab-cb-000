@@ -15,3 +15,9 @@ function produceTipCalculator(percent) {
     return (bill * percent);
   }
 }
+
+function createDriver() {
+  return function() {
+    return 0
+  }
+}
