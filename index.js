@@ -1,11 +1,11 @@
 function produceDrivingRange(start, finish) {
-  let inside = Math.abs(parseInt(finish) - parseInt(start));
+  let travelDistance = Math.abs(parseInt(finish) - parseInt(start));
 
-  function(maxDistance){
-    if(inside <= maxDistance) {
-    	return `within range by ${maxDistance - inside}`
+  function insideFunction(maxDistance){
+    if(travelDistance <= maxDistance) {
+    	return `within range by ${maxDistance - travelDistance}`
     } else {
-      return `${inside - maxDistance} blocks out of range`
+      return `${travelDistance - maxDistance} blocks out of range`
     }
   }
 }
