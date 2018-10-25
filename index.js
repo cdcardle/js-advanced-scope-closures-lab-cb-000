@@ -1,7 +1,7 @@
-function produceDrivingRange(start, finish) {
-  let travelDistance = Math.abs(parseInt(finish) - parseInt(start));
-
-  return function insideFunction(blockRange){
+function produceDrivingRange(blockRange) {
+  return function insideFunction(start, finish){
+    let travelDistance = Math.abs(parseInt(finish) - parseInt(start));
+    
     if(travelDistance <= blockRange) {
     	return `within range by ${blockRange - travelDistance}`
     } else {
